@@ -1,0 +1,78 @@
+---
+import "../style/inicio.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/icon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/webevento/src/pages/inicio.css">
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<title>EL COLISEO</title>
+	</head>
+	<body>
+		<nav>
+			<div class="navegador">
+				<div class="links">
+					<a href="" class="linknav">INICIO</a>
+					<a href="#formulario" class="linknav">FORMULARIO</a>
+					<a href="" class="linknav">REGLAMENTO</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="init"></section>
+
+		<section class="timer">
+			<div class="timertext">
+				<h1>Quedan exáctamente:</h1>
+			</div>
+			<div class="timer-container">
+				<div class="timer-item">
+					<span id="days">00</span>
+					<p>Días</p>
+				</div>
+				<div class="timer-item">
+					<span id="hours">00</span>
+					<p>Horas</p>
+				</div>
+				<div class="timer-item">
+					<span id="minutes">00</span>
+					<p>Minutos</p>
+				</div>
+				<div class="timer-item">
+					<span id="seconds">00</span>
+					<p>Segundos</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="info">
+				<h1>¿Qué es el Coliseo?</h1>
+				<p class="infotxt">
+					Es un evento creado por Bufexz donde vamos a reunir a los mejores Streamers y Youtubers de Minecraft PVP
+					para un torneo de 1vs1 con un estilo de coliseo romano.
+				</p>
+			</div>
+		</section>
+		<section id="formulario" class="forms">
+			<div class="forms-wrapper">
+				<iframe
+					title="Formulario de inscripción"
+					src="https://forms.gle/QncPAYQUkGgM3qEh7"
+					frameborder="0"
+					marginheight="0"
+					marginwidth="0"
+					loading="lazy"
+				></iframe>
+			</div>
+		</section>
+		<script type="module" src="/src/style/index.ts"></script>
+	</body>
+</html>
