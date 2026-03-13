@@ -42,5 +42,18 @@ export function initCountdown(targetDate: Date) {
 }
 
 // ---------- Uso (cambia la fecha al evento que quieras contar) ----------
-initCountdown(new Date("2026-12-31T23:59:59"));
+initCountdown(new Date("2026-07-26T15:00:00"));
+
+const boton = document.getElementById("reglamento") as HTMLAnchorElement;
+const alerta = document.getElementById("alerta") as HTMLDivElement;
+
+boton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  alerta.style.display = "block";
+
+  setTimeout(() => {
+    alerta.style.display = "none";
+  }, 3000);
+});
 

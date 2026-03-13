@@ -8,7 +8,7 @@ import "../style/inicio.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/icon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" href="/webevento/src/pages/inicio.css">
+		<link rel="stylesheet" href="inicio.css">
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +21,13 @@ import "../style/inicio.css";
 				<div class="links">
 					<a href="" class="linknav">INICIO</a>
 					<a href="#formulario" class="linknav">FORMULARIO</a>
-					<a href="" class="linknav">REGLAMENTO</a>
+					<a href="#" class="linknav" id="reglamento">REGLAMENTO</a>
 				</div>
 			</div>
 		</nav>
-
+		<div id="alerta" class="alerta">
+  			Muy pronto estará disponible esta información
+		</div>
 		<section class="init"></section>
 
 		<section class="timer">
@@ -63,16 +65,15 @@ import "../style/inicio.css";
 		</section>
 		<section id="formulario" class="forms">
 			<div class="forms-wrapper">
-				<iframe
-					title="Formulario de inscripción"
-					src="https://forms.gle/QncPAYQUkGgM3qEh7"
-					frameborder="0"
-					marginheight="0"
-					marginwidth="0"
-					loading="lazy"
-				></iframe>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZEFmjrIrpeRIDylu9qLkQxcNRy3VWJMfQIv5SxKZiAWSY6A/viewform?embedded=true" width="640" height="865" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 			</div>
 		</section>
-		<script type="module" src="/src/style/index.ts"></script>
+	<script type="module" src="/src/style/index.ts">
+	function mostrarAlerta(event){
+  		event.preventDefault(); // evita que el link recargue la página
+  		alert("Muy pronto estará disponible esta información");
+	}	
+		
+	</script>
 	</body>
 </html>
