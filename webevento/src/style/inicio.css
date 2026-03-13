@@ -206,8 +206,9 @@ body{
     /* HERO sin parallax en móvil */
     .init{
         background-attachment: scroll;
-        min-height: 70vh;
+        min-height: 55vh;
         background-position: center top;
+        background-size: cover;
     }
 
     .timer{
