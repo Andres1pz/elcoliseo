@@ -51,15 +51,16 @@ body{
     cursor:pointer;
 }
 
-/* ---------------- HERO ---------------- */
+/* ---------------- HERO / PARALLAX ---------------- */
 
 .init {
     background-image: url(fondo.webp);
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* ---------------- TIMER ---------------- */
@@ -202,8 +203,11 @@ body{
         display:flex;
     }
 
+    /* HERO sin parallax en móvil */
     .init{
-        height:60vh;
+        background-attachment: scroll;
+        min-height: 70vh;
+        background-position: center top;
     }
 
     .timer{
